@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitud de turnos</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Centro Medico</h1>
+        <h2>Solicitud de turnos</h2>
+    </header>
+
+    <main>
+        <form class="contenedor-formulario">
+            <!-- Nombre y apellido -->
+            <label for="nombre">Nombre y Apellido</label>
+            <input type="text" id="nombre" name="nombre" class="campo">
+            <p id="respuesta-nombre"></p>
+
+            <!-- Correo -->
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" class="campo">
+            <p id="respuesta-correo"></p>
+
+            <!-- telefono -->
+            <label for="telefono">Telefono</label>
+            <input type="tel" id="telefono" name="telefono" class="campo">
+            <p id="respuesta-tel"></p>
+
+            <!-- Fecha -->
+            <label for="fecha">Fecha del turno</label>
+            <input type="date" id="fecha" name="fecha" class="campo">
+            <p id="respuesta-fecha"></p>
+
+            <!-- Select: Limitar opciones -->
+            <label for="especialidad">Especialidad</label>
+            <select name="especialidad" id="especialidad" class="campo">
+                <option>Medicina Clinica</option>
+                <option>Odontologia</option>
+                <option>Pediatria</option>
+            </select>
+
+            <!-- datalist: sugerir pero tambien poder escribir -->
+            <label for="obra">Obra Social</label>
+            <input type="text" id="obra" name="obra" list="obras" class="campo">
+            <p id="respuesta-obra"></p>
+            <datalist id="obras">
+                <option>IPS</option>
+                <option>OSDE</option>
+                <option>APTM</option>
+            </datalist>
+
+            <!-- Radio button: permitir al usuario elegir una opcion -->
+            <label for="tipoAtencion">Tipo de atención</label>
+
+            <input type="radio" id="presencial" name="tipoAtencion">
+            <label for="presencial">Presencial</label>
+            
+            <input type="radio" id="virtual" name="tipoAtencion">
+            <label for="virtual">Virtual</label>
+            <p id="respuesta-tipoAtencion"></p>
+
+            <!-- textarea: texto largo -->
+            <label for="observaciones">Observaciones</label>
+            <textarea name="observaciones" id="observaciones" class="campo"></textarea>
+            <p id="respuesta-observaciones"></p>
+
+            <!-- checkbox: multiples opciones -->
+            <input type="checkbox" id="terminos" name="terminos">
+            <label for="terminos">Acepto terminos y condiciones</label>
+            <p id="respuesta-terminos"></p>
+
+            <button id="enviar" type="button">Enviar formulario</button>
+            <p id="correcto"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Programación II</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
