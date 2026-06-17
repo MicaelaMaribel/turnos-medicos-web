@@ -14,7 +14,7 @@ try {
         $contrasena
     );
 
-    echo "Conexion exitosa";
+    //echo "Conexion exitosa";
 } catch (PDOException $error) {
     echo "Error de conexion: ".$error->getMenssage();
 }

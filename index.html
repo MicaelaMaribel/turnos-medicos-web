@@ -17,7 +17,7 @@
     </header>
 
     <main>
-        <form class="contenedor-formulario">
+        <form class="contenedor-formulario" action="guardar.php" method="post">
             <!-- Nombre y apellido -->
             <label for="nombre">Nombre y Apellido</label>
             <input type="text" id="nombre" name="nombre" class="campo">
@@ -59,10 +59,10 @@
             <!-- Radio button: permitir al usuario elegir una opcion -->
             <label for="tipoAtencion">Tipo de atención</label>
 
-            <input type="radio" id="presencial" name="tipoAtencion">
+            <input type="radio" id="presencial" name="tipoAtencion" value="Presencial">
             <label for="presencial">Presencial</label>
             
-            <input type="radio" id="virtual" name="tipoAtencion">
+            <input type="radio" id="virtual" name="tipoAtencion" value="Virtual">
             <label for="virtual">Virtual</label>
             <p id="respuesta-tipoAtencion"></p>
 
@@ -76,8 +76,10 @@
             <label for="terminos">Acepto terminos y condiciones</label>
             <p id="respuesta-terminos"></p>
 
-            <button id="enviar" type="button">Enviar formulario</button>
+            <button id="enviar" type="submit">Enviar formulario</button>
             <p id="correcto"></p>
+
+            <a href="listar.php">Ver turnos guardados</a>
         </form>
     </main>
 
